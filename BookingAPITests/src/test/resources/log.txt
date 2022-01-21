@@ -1,0 +1,399 @@
+******************************************************************
+             TC5_partialUpdateBooking logs           
+*********************************************************************
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/auth/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password123"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Etag: W/"1b-MgBbC/m/Pk1Yhq80stTweRltivQ"
+Date: Fri, 21 Jan 2022 04:52:20 GMT
+Via: 1.1 vegur
+
+{
+    "token": "d54bda36d2ef337"
+}
+Request method:	PATCH
+Request URI:	https://restful-booker.herokuapp.com/booking/3
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Cookie=token=d54bda36d2ef337
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Kate",
+    "lastname": "Fisher",
+    "totalprice": 0,
+    "depositpaid": false,
+    "bookingdates": null,
+    "additionalneeds": null
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 38
+Etag: W/"26-YivTJQW08b8vvNUlaGyE0eNxfac"
+Date: Fri, 21 Jan 2022 04:52:22 GMT
+Via: 1.1 vegur
+
+<html>
+  <body>Cannot read property 'checkin' of null</body>
+</html>
+******************************************************************
+             TC3_getBookingById logs           
+*********************************************************************
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/3
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 38
+Etag: W/"26-YivTJQW08b8vvNUlaGyE0eNxfac"
+Date: Fri, 21 Jan 2022 04:52:24 GMT
+Via: 1.1 vegur
+
+<html>
+  <body>Cannot read property 'checkin' of null</body>
+</html>
+******************************************************************
+             TC1_createToken logs           
+*********************************************************************
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/auth/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password123"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Etag: W/"1b-4DmNFi1ogh2MNsIkQjjsQiuJ4oU"
+Date: Fri, 21 Jan 2022 04:52:26 GMT
+Via: 1.1 vegur
+
+{
+    "token": "36caf5fd13bad7d"
+}
+******************************************************************
+             TC4_createBooking logs           
+*********************************************************************
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Mary",
+    "lastname": "Active",
+    "totalprice": 200,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": 1642740746396,
+        "checkout": 1642740746396
+    },
+    "additionalneeds": "None"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 192
+Etag: W/"c0-PdR9UjkP7o8LTsE4uuMt4wmMU5Y"
+Date: Fri, 21 Jan 2022 04:52:27 GMT
+Via: 1.1 vegur
+
+{
+    "bookingid": 33,
+    "booking": {
+        "firstname": "Mary",
+        "lastname": "Active",
+        "totalprice": 200,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2022-01-21",
+            "checkout": "2022-01-21"
+        },
+        "additionalneeds": "None"
+    }
+}
+******************************************************************
+             TC6_deleteBooking logs           
+*********************************************************************
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/booking/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstname": "Test",
+    "lastname": "Test",
+    "totalprice": 100,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": 1642740748306,
+        "checkout": 1642740748306
+    },
+    "additionalneeds": "None"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 190
+Etag: W/"be-DZSm4TA+rz/YPxhaVLZWFO45lt0"
+Date: Fri, 21 Jan 2022 04:52:29 GMT
+Via: 1.1 vegur
+
+{
+    "bookingid": 34,
+    "booking": {
+        "firstname": "Test",
+        "lastname": "Test",
+        "totalprice": 100,
+        "depositpaid": true,
+        "bookingdates": {
+            "checkin": "2022-01-21",
+            "checkout": "2022-01-21"
+        },
+        "additionalneeds": "None"
+    }
+}
+Request method:	POST
+Request URI:	https://restful-booker.herokuapp.com/auth/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "username": "admin",
+    "password": "password123"
+}
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 27
+Etag: W/"1b-IFZbmZ9l2Qu36K4xDCDlM5pNous"
+Date: Fri, 21 Jan 2022 04:52:31 GMT
+Via: 1.1 vegur
+
+{
+    "token": "ba2fede541f7efe"
+}
+Request method:	DELETE
+Request URI:	https://restful-booker.herokuapp.com/booking/34
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Cookie=token=ba2fede541f7efe
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 201 Created
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: text/plain; charset=utf-8
+Content-Length: 7
+Etag: W/"7-rM9AyJuqT6iOan/xHh+AW+7K/T8"
+Date: Fri, 21 Jan 2022 04:52:32 GMT
+Via: 1.1 vegur
+
+Created
+******************************************************************
+             TC2_getBookingIds logs           
+*********************************************************************
+Request method:	GET
+Request URI:	https://restful-booker.herokuapp.com/booking/
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: Cowboy
+Connection: keep-alive
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 536
+Etag: W/"218-dExz8rSYUzQqKx7m6RhYm1p+Wik"
+Date: Fri, 21 Jan 2022 04:52:34 GMT
+Via: 1.1 vegur
+
+[
+    {
+        "bookingid": 5
+    },
+    {
+        "bookingid": 11
+    },
+    {
+        "bookingid": 20
+    },
+    {
+        "bookingid": 30
+    },
+    {
+        "bookingid": 2
+    },
+    {
+        "bookingid": 12
+    },
+    {
+        "bookingid": 9
+    },
+    {
+        "bookingid": 26
+    },
+    {
+        "bookingid": 19
+    },
+    {
+        "bookingid": 6
+    },
+    {
+        "bookingid": 24
+    },
+    {
+        "bookingid": 18
+    },
+    {
+        "bookingid": 28
+    },
+    {
+        "bookingid": 22
+    },
+    {
+        "bookingid": 14
+    },
+    {
+        "bookingid": 3
+    },
+    {
+        "bookingid": 13
+    },
+    {
+        "bookingid": 29
+    },
+    {
+        "bookingid": 27
+    },
+    {
+        "bookingid": 7
+    },
+    {
+        "bookingid": 1
+    },
+    {
+        "bookingid": 33
+    },
+    {
+        "bookingid": 16
+    },
+    {
+        "bookingid": 21
+    },
+    {
+        "bookingid": 23
+    },
+    {
+        "bookingid": 15
+    },
+    {
+        "bookingid": 25
+    },
+    {
+        "bookingid": 31
+    },
+    {
+        "bookingid": 8
+    },
+    {
+        "bookingid": 10
+    },
+    {
+        "bookingid": 4
+    },
+    {
+        "bookingid": 17
+    }
+]
